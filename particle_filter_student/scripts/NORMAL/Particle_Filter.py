@@ -167,9 +167,9 @@ class Particle_Filter:
         print(observation_error)
         diff_distance = abs(distance_particle-observed_distance)
         # First calculus method 
-        mu = 0
-        sigma = 4
-        weight = 10*math.exp(-((diff_distance - mu) ** 2) / (2 * sigma ** 2))
+        # mu = 0
+        # sigma = 4
+        # weight = 10*math.exp(-((diff_distance - mu) ** 2) / (2 * sigma ** 2))
         # Second calculus method
-        #weight = 10/(math.exp(0.15*diff_distance))
+        weight = 10/(math.exp(0.15*diff_distance))
         return weight
